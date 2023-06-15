@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flixter</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <header>
       <div class="navbar">
         <div class="webtitle">FLIXTER</div>
-        <div class="navsearch">
-          <ul class="options">
-            <li class="option">Action</li>
-            <li class="option">Romantic</li>
-            <li class="option">For you</li>
-          </ul>
-          <div class="searchbar">
-            <img src="icons/search.png" alt="" class="searchicon" />
-            <input type="text" placeholder="Search" />
-          </div>
+        <div class="searchbar">
+          <img src="icons/search.png" alt="" class="searchicon" />
+          <input type="text" placeholder="Search" id="search-input" />
         </div>
       </div>
     </header>
     <!-- Spectacular -->
+    <!-- Showing movies -->
+    <div id="movies-grid" class="movies-grid">
+      <!-- Add more movie elements as needed -->
+    </div>
+    <div class="button-container">
+      <button id="load-more-movies-btn" class="loadmorebtn">
+        Load more movies
+      </button>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

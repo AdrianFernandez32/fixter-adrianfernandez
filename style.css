@@ -7,114 +7,72 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header {
-  height: 70px;
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
-  background: #000;
-}
-header .header-left {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  font-weight: bold;
+  background: black;
   color: #e50914;
-  margin: 1rem;
+  height: 80px;
+  width: 100%;
 }
 
-header .header-left {
-  width: 200px;
-}
-header .header-left nav {
-  margin-left: 50px;
-}
-header .header-left nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav ul li a {
-  display: block;
-  color: #cfd9e0;
-  font-size: 18px;
-  padding: 5px 10px;
-  transition: 0.2s;
-}
-nav ul li a:hover,
-nav ul li a.active {
-  color: #fff;
-  background: #e50914;
-  border-radius: 5px;
-}
-nav .login-signup {
-  display: none;
-}
-header .header-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header .header-right .ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: center;
-}
-header .login-signup {
-  color: #cfd9e0;
+.webtitle {
+  color: #e50914;
+  font-size: 3rem;
   font-weight: bold;
+  margin-left: 3rem;
 }
-header .header-right .hamburger {
-  margin-left: 20px;
-  cursor: pointer;
-  display: none;
+
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 3rem;
+  width: 50%;
 }
-header .header-right .hamburger div {
-  width: 40px;
-  height: 2px;
-  margin: 6px 0;
+
+.option {
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.8rem;
+}
+.option:hover {
+  background: #e50914;
+  color: #fff;
+}
+
+.navsearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.searchbar {
   background: #fff;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 30px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
-@media only screen and (max-width: 1000px) {
-  header {
-    padding: 0 20px;
-  }
-  header .header-right .hamburger {
-    display: block;
-  }
-  header .header-left nav {
-    margin: 0;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-    background-color: #000;
-    padding: 30px;
-    transition: 0.3s;
-    text-align: center;
-    z-index: -1;
-  }
-  header .header-left nav.active {
-    top: 70px;
-  }
-  header .header-left nav ul {
-    display: block;
-  }
+
+.searchicon {
+  margin-right: 5px;
 }
-@media only screen and (max-width: 500px) {
-  nav .login-signup {
-    display: block;
-    margin-top: 20px;
-  }
-  header .header-right .login-signup {
-    display: none;
-  }
+
+.searchbar input[type='text'] {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
 }
+
+/* .spectacular {
+  background: ;
+} */

@@ -8,27 +8,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navbar -->
-    <header>
-      <div class="navbar">
-        <div class="webtitle">FLIXTER</div>
-        <div class="searchbar">
-          <img src="icons/search.png" alt="" class="searchicon" />
-          <input type="text" placeholder="Search" id="search-input" />
+    <div class="container">
+      <!-- Navbar -->
+      <header>
+        <div class="navbar">
+          <div class="webtitle">FLIXTER</div>
+          <div class="searchbar">
+            <img src="icons/search.png" alt="" class="searchicon" />
+            <input type="text" placeholder="Search" id="search-input" />
+          </div>
         </div>
-      </div>
-    </header>
-    <!-- Spectacular -->
-    <!-- Showing movies -->
-    <button class="exit hidden" id="exitbtn">Go back to popular movies</button>
-    <div id="movies-grid" class="movies-grid">
-      <!-- Add more movie elements as needed -->
-    </div>
-    <div class="button-container">
-      <button id="load-more-movies-btn" class="loadmorebtn">
-        Load more movies
+      </header>
+      <!-- Spectacular -->
+      <!-- Showing movies -->
+
+      <button class="exit hidden" id="exitbtn">
+        Go back to popular movies
       </button>
+      <div id="movies-grid" class="movies-grid">
+        <!-- Add more movie elements as needed -->
+      </div>
+      <div class="button-container">
+        <button id="load-more-movies-btn" class="loadmorebtn">
+          Load more movies
+        </button>
+      </div>
+      <div class="pop-up"></div>
+      <script src="script.js"></script>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

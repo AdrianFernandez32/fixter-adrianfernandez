@@ -26,6 +26,7 @@ async function fetchMovies(endpoint) {
 }
 
 async function getPopularMovies() {
+  loadmore.classList.remove('hidden');
   searchInput.value = '';
   const endpoint = `${baseUrl}/movie/popular?api_key=${apiKey}`;
   moviesGrid.innerHTML = '';
@@ -45,6 +46,7 @@ async function getPopularMovies() {
     }
     image.alt = 'Movie Poster';
     image.id - 'movie-poster';
+    image.classList.add('movie-poster');
     movieContainer.appendChild(image);
 
     const title = document.createElement('h3');
@@ -55,7 +57,7 @@ async function getPopularMovies() {
 
     const votes = document.createElement('p');
     votes.classList.add('votes');
-    votes.textContent = `Votes: ${movie.vote_average}`;
+    votes.textContent = `Votes: ${movie.vote_average} ⭐️`;
     votes.id = 'movie-votes';
     movieContainer.appendChild(votes);
 

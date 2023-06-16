@@ -10,6 +10,7 @@
   position: relative;
   min-height: 100vh;
   background: #fff;
+  width: 100%;
 }
 
 .navbar {
@@ -253,6 +254,12 @@
   }
 }
 
-.pop-up {
-  width: 70%;
+.container .pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
 }

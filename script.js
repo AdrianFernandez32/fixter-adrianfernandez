@@ -3,6 +3,12 @@ const baseUrl = 'https://api.themoviedb.org/3';
 
 const moviesGrid = document.getElementById('movies-grid');
 const imageUrl = 'https://image.tmdb.org/t/p/w500';
+const exitbutton = document.getElementById('exitbtn');
+const searchInput = document.getElementById('search-input');
+const loadmore = document.getElementById('load-more-movies-btn');
+searchInput.addEventListener('keyup', handleSearch);
+exitbutton.addEventListener('click', getPopularMovies);
+var pages = 1;
 
 async function fetchMovies(endpoint) {
   try {
@@ -20,57 +26,57 @@ async function fetchMovies(endpoint) {
 }
 
 async function getPopularMovies() {
+  searchInput.value = '';
   const endpoint = `${baseUrl}/movie/popular?api_key=${apiKey}`;
-
+  moviesGrid.innerHTML = '';
   const popularMovies = await fetchMovies(endpoint);
   console.log('Popular Movies:', popularMovies);
+  exitbutton.classList.add('hidden');
 
   popularMovies.forEach((movie) => {
-    // Create the movie container
     const movieContainer = document.createElement('div');
     movieContainer.classList.add('movie');
 
-    // Create the movie poster
     const image = document.createElement('img');
-    image.src = imageUrl + movie.poster_path;
+    if (movie.poster_path === null) {
+      image.src = 'https://dummyimage.com/1000x2000/000/fff&text=No+poster';
+    } else {
+      image.src = imageUrl + movie.poster_path;
+    }
     image.alt = 'Movie Poster';
     image.id - 'movie-poster';
     movieContainer.appendChild(image);
 
-    // Create the movie title
     const title = document.createElement('h3');
     title.classList.add('title');
     title.textContent = movie.title;
     title.id = 'movie-title';
     movieContainer.appendChild(title);
 
-    // Create the votes count
     const votes = document.createElement('p');
     votes.classList.add('votes');
     votes.textContent = `Votes: ${movie.vote_average}`;
     votes.id = 'movie-votes';
     movieContainer.appendChild(votes);
 
-    // Append the movie container to the movies grid
     moviesGrid.appendChild(movieContainer);
   });
 }
 
 getPopularMovies();
 
-const showMoreButton = document.querySelector('.show-more');
-let currentPage = 0;
-const offset = 20;
-
 function handleSearch(event) {
   if (event.key === 'Enter') {
     const query = event.target.value;
+    if (query === '') {
+      return 0;
+    }
     const moviesGrid = document.getElementById('movies-grid');
+    exitbutton.classList.remove('hidden');
+    loadmore.classList.add('hidden');
 
-    // Clear existing content
     moviesGrid.innerHTML = '';
 
-    // Send the request to search for movies
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`
     )
@@ -79,32 +85,32 @@ function handleSearch(event) {
         // Process the search results
         const movies = data.results;
         movies.forEach((movie) => {
-          // Create the movie container
           const movieContainer = document.createElement('div');
           movieContainer.classList.add('movie');
 
-          // Create the movie poster
           const image = document.createElement('img');
-          image.src = imageUrl + movie.poster_path;
+          if (movie.poster_path === null) {
+            image.src =
+              'https://dummyimage.com/1000x2000/000/fff&text=No+poster';
+          } else {
+            image.src = imageUrl + movie.poster_path;
+          }
           image.alt = 'Movie Poster';
           image.id - 'movie-poster';
           movieContainer.appendChild(image);
 
-          // Create the movie title
           const title = document.createElement('h3');
           title.classList.add('title');
           title.textContent = movie.title;
           title.id = 'movie-title';
           movieContainer.appendChild(title);
 
-          // Create the votes count
           const votes = document.createElement('p');
           votes.classList.add('votes');
           votes.textContent = `Votes: ${movie.vote_average}`;
           votes.id = 'movie-votes';
           movieContainer.appendChild(votes);
 
-          // Append the movie container to the movies grid
           moviesGrid.appendChild(movieContainer);
         });
       })
@@ -114,6 +120,49 @@ function handleSearch(event) {
   }
 }
 
-// Add event listener to the search input
-const searchInput = document.getElementById('search-input');
-searchInput.addEventListener('keyup', handleSearch);
+loadmore.addEventListener('click', async (event) => {
+  event.preventDefault(); // Prevent form submission (optional)
+
+  pages++;
+
+  try {
+    const url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=${pages}`;
+
+    const response = await fetch(url);
+    const data = await response.json();
+    const movies = data.results;
+    console.log(movies);
+
+    movies.forEach((movie) => {
+      const movieContainer = document.createElement('div');
+      movieContainer.classList.add('movie');
+
+      const image = document.createElement('img');
+      if (movie.poster_path === null) {
+        image.src = 'https://dummyimage.com/1000x2000/000/fff&text=No+poster';
+      } else {
+        image.src = imageUrl + movie.poster_path;
+      }
+      image.alt = 'Movie Poster';
+      image.id - 'movie-poster';
+      movieContainer.appendChild(image);
+
+      const title = document.createElement('h3');
+      title.classList.add('title');
+      title.textContent = movie.title;
+      title.id = 'movie-title';
+      movieContainer.appendChild(title);
+
+      const votes = document.createElement('p');
+      votes.classList.add('votes');
+      votes.textContent = `Votes: ${movie.vote_average}`;
+      votes.id = 'movie-votes';
+      movieContainer.appendChild(votes);
+
+      moviesGrid.appendChild(movieContainer);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+  console.log('Button clicked!');
+});

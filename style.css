@@ -129,3 +129,21 @@
 .hidden {
   display: none;
 }
+
+.exit {
+  background: transparent;
+  font-weight: bolder;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+.exit:hover {
+  background: black;
+  color: #fff;
+}

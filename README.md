@@ -4,7 +4,7 @@ Submitted by: **Oscar Adrian Fernandez Santana**
 
 Estimated time spent: **10** hours spent in total
 
-Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [Flixster Deployed Site](https://adrianfernandez32.github.io/fixter-adrianfernandez/)
 
 ### Application Features
 
@@ -40,7 +40,9 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-[![Watch the video](https://www.loom.com/share/fe052b6933cc4189ab26bf37e65e8e38)]
+<a href="https://www.loom.com/share/0cf3b292071d4b05a59e4de039a9ac59">
+  <img style="max-width:300px;" src="https://www.loom.com/share/fe052b6933cc4189ab26bf37e65e8e38">
+</a>
 
 ### Reflection
 

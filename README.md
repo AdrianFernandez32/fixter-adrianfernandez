@@ -40,9 +40,9 @@ Deployed Application (optional): [Flixster Deployed Site](https://adrianfernande
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/0cf3b292071d4b05a59e4de039a9ac59">
-  <img style="max-width:300px;" src="https://www.loom.com/share/fe052b6933cc4189ab26bf37e65e8e38">
-</a>
+<a href="https://www.loom.com/share/fe052b6933cc4189ab26bf37e65e8e38">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/fe052b6933cc4189ab26bf37e65e8e38-with-play.gif">
+  </a>
 
 ### Reflection
 

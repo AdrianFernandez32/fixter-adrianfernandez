@@ -1,10 +1,8 @@
-📝 **NOTE** Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Week 1 Assignment: Flixster
 
-Submitted by: **NAME**
+Submitted by: **Oscar Adrian Fernandez Santana**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **10** hours spent in total
 
 Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
@@ -34,11 +32,11 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 #### Stretch Features
 
-- [ ] Deploy website using GitHub Pages.
-- [ ] Allow user to view more details about a movie within a popup.
+- [x] Deploy website using GitHub Pages.
+- [x] Allow user to view more details about a movie within a popup.
 - [x] Improve the user experience through CSS & animation.
-- [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ ] Implement anything else that you can get done to improve the app functionality!
+- [x] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
 
@@ -50,20 +48,19 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Some of the topics helped me to develop my app, but I had to learn on my own how to create popups and use embenced youtube
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+I would add a carousel to make it prettier, maybe also some navigarion bar for each genere and add responsiveness to it. Also, maybe I would add some dynamic search, to not press enter to see your movie.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
-
-### Open-source libraries used
-
-- Add any links to open-source libraries used in your project.
+I would like to add more styiling and create a lot of reusable functions instead of writing them all the time. That was something I could improve.
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Thank to Thomas for helping me debuging a little of my project, he didn't say the answer but he guided me to get it.
+Also thanks to Tim for teaching me to debug like an engineer.
